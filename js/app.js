@@ -22,7 +22,6 @@ var cardOne = function (){
     var inputValue = document.getElementById('input-list').value;
     // document.getElementById('input-list').value = '';
     var newText = document.createTextNode(inputValue);
-    console.log(newText);
     var titleH4 = document.getElementById('cardText');
     titleH4.appendChild(newText);
     var esconde = document.getElementById('hide');
@@ -46,7 +45,26 @@ var cardTwo = function (){
     var noShow = document.getElementById('newCard');
     noShow.style.display = 'none';
     secondCard.style.display = 'block';
+    write.focus();// Versión 0.0.4 //
 };
 
 var task = document.getElementById('addWhiteArea');
 task.addEventListener('click', cardTwo);
+
+// Versión 0.0.4 //
+
+var lastCard = function (){
+    var pFather = document.getElementById('cardTitle');
+    var newP = document.createElement('p');
+    var textAreaValue = document.getElementById('whiteArea').value;
+    var taskName = document.createTextNode(textAreaValue);
+    pFather.appendChild(newP);
+    newP.appendChild(taskName);
+    var writeTwo = document.getElementById('whiteArea');
+    document.getElementById('whiteArea').value = '';
+    var secondAddBtn = document.getElementById('addBtn');
+    var finalClose = document.getElementById('secondClose');
+}
+
+var bigCard = document.getElementById('addBtn');
+bigCard.addEventListener ('click',lastCard);
