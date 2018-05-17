@@ -51,7 +51,7 @@ var cardTwo = function (){
 var task = document.getElementById('addWhiteArea');
 task.addEventListener('click', cardTwo);
 
-// Versión 0.0.4 //
+// Versión 0.0.4 y 0.0.5 //
 
 var lastCard = function (){
     var pFather = document.getElementById('cardTitle');
@@ -64,6 +64,7 @@ var lastCard = function (){
     document.getElementById('whiteArea').value = '';
     var secondAddBtn = document.getElementById('addBtn');
     var finalClose = document.getElementById('secondClose');
+    
 }
 
 var bigCard = document.getElementById('addBtn');
